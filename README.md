@@ -1,1 +1,4 @@
 # Cloud-Infrastructure-Deployment-and-DevOps-Automation
+
+## Overview
+Cloud Infrastructure Deployment and DevOps Automation is a application designed to provide hands-on experience with cloud infrastructure, containerization, and deployment automation. The application demonstrates how a Python Flask web application can be containerized using Docker, managed with Git and GitHub, and deployed on an AWS EC2 instance. Terraform is used to provision cloud infrastructure following Infrastructure as Code (IaC) principles, while GitHub Actions automates the application build process through a basic Continuous Integration (CI) workflow. The application also provides practical exposure to Linux-based deployment, cloud resource management, and modern software delivery practices, helping build foundational skills in cloud computing and automation technologies.
