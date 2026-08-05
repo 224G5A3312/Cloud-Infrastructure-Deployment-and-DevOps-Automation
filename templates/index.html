@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Infrastructure Deployment and DevOps Automation</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">DevOps Cloud Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/health">Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/system-info">System Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center text-white">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Cloud Infrastructure Deployment</h1>
+            <p class="lead">and DevOps Automation</p>
+            <p class="mb-4">
+                A complete DevOps pipeline: Flask &rarr; Docker &rarr; GitHub Actions &rarr; Terraform &rarr; AWS EC2
+            </p>
+            <span class="badge bg-light text-dark">Environment: {{ env }}</span>
+            <span class="badge bg-light text-dark">Version: {{ version }}</span>
+        </div>
+    </header>
+
+    <!-- Feature Cards -->
+    <main class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🐳 Containerized</h5>
+                        <p class="card-text">
+                            This application is packaged into a Docker image, ensuring it runs
+                            consistently across local machines, CI pipelines, and cloud servers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">⚙️ Automated CI</h5>
+                        <p class="card-text">
+                            Every push to GitHub triggers an automated pipeline that lints,
+                            tests, and builds the application via GitHub Actions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">☁️ Infrastructure as Code</h5>
+                        <p class="card-text">
+                            AWS infrastructure — including the EC2 instance and security group —
+                            is provisioned entirely through Terraform.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="/health" class="btn btn-primary me-2">Check Health Endpoint</a>
+            <a href="/about" class="btn btn-outline-secondary">Learn More</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p class="mb-0">Cloud Infrastructure Deployment and DevOps Automation &mdash; Built with Flask, Docker &amp; Terraform</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

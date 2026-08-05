@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cloud Infrastructure Deployment and DevOps Automation</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">DevOps Cloud Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/health">Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/system-info">System Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="hero text-center text-white">
+        <div class="container py-5">
+            <h1 class="fw-bold">About This Project</h1>
+            <p class="lead">A hands-on demonstration of a complete DevOps lifecycle</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+
+        <section class="mb-5">
+            <h2>Project Purpose</h2>
+            <p>
+                This project was built to demonstrate a real, end-to-end DevOps workflow —
+                from writing application code to deploying it on cloud infrastructure.
+                It covers the core responsibilities of a DevOps Engineer: application
+                development, containerization, continuous integration, infrastructure
+                automation, and Linux server deployment.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h2>How It Works</h2>
+            <ol>
+                <li>The Flask application is developed and tracked with Git.</li>
+                <li>Code is pushed to a GitHub repository.</li>
+                <li>GitHub Actions automatically runs a CI pipeline: installing dependencies, running checks, and building the Docker image.</li>
+                <li>Terraform provisions an AWS EC2 instance and security group.</li>
+                <li>The Docker container is deployed and run on the EC2 instance, making the app publicly accessible.</li>
+            </ol>
+        </section>
+
+        <section class="mb-5">
+            <h2>Technologies Used</h2>
+            <div class="row g-3">
+                {% for tech in technologies %}
+                <div class="col-md-4 col-6">
+                    <div class="card text-center shadow-sm h-100">
+                        <div class="card-body">
+                            <p class="mb-0 fw-semibold">{{ tech }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2>Why This Project Matters</h2>
+            <p>
+                Modern DevOps roles require more than theoretical knowledge of tools —
+                they require the ability to connect them into a working pipeline.
+                This project ties together application development, containerization,
+                CI automation, and cloud infrastructure provisioning into a single,
+                reproducible workflow that mirrors how real teams ship software.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p class="mb-0">Cloud Infrastructure Deployment and DevOps Automation &mdash; Built with Flask, Docker &amp; Terraform</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
